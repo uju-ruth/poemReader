@@ -20,7 +20,7 @@ import {Search} from 'lucide-react'
 const HomePage = () => {
   const [saved, setSaved] = useState(false);
   const [liked, setLiked] = useState(false);
-  const [add, setAdded] = useState (false)
+ 
 
   const Toggle = () => {
     setIsVisible(prev => !prev)
@@ -29,8 +29,7 @@ const HomePage = () => {
   //Toggle the state of the icon when clicked
   const toggleSave = () => setSaved((prev) => !prev);
   const toggleLike = () => setLiked((prev) => !prev);
-  const toggleAdd = () => setAdded((prev) => !prev)
-
+  
   const categories = ["Romance", "African", "Power", "Adventure", "Art", "Mindfullness", "Yada Yada"]
 
   const navigate = useNavigate();
@@ -48,10 +47,14 @@ const HomePage = () => {
 
       </div>
       
-      {isVisible && <div className="w-full h-[300px] bg-yellow-500 absolute top-0 right-0">
+      {isVisible && <div className=" lg:hidden w-[40%] h-full bg-gray-200 fixed top-0 right-0">
+                    <Navbar/>
         </div>}
       {/* Navbar */}
-      <div className=" hidden lg:flex w-full md:w-[10%] bg-gray-200">
+      <div className="h-screen hidden lg:flex w-full md:w-[10%] bg-gray-200">
+
+      </div>
+      <div className=" fixed h-screen top-0 left-0 hidden lg:flex w-full md:w-[10%] bg-gray-200">
         <Navbar />
       </div>
 .
@@ -249,8 +252,14 @@ const HomePage = () => {
           </div>
         </main>
 
+
         {/* Right-hand section */}
-        <section className="hidden lg:block w-[25%] p-4 border-l font-roboto">
+        
+      </div>
+      <div className="hidden lg:block w-[25%] p-4 border-l font-roboto">
+
+      </div>
+      <section className="hidden fixed right-0 top-0 lg:block w-[25%] p-4 border-l font-roboto">
           <button 
             onClick={handleSubscription}
             className="w-full bg-[#044AB1] py-3 rounded-full text-sm text-white mb-6 mt-5 font-semibold font-roboto hover:bg-[#4570b0fb] transition-colors">
@@ -322,7 +331,6 @@ const HomePage = () => {
         </div>
       </div>
         </section>
-      </div>
     </div>
   );
 };

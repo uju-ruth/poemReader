@@ -10,7 +10,7 @@ import Image from "../assets/images/image";
 
 const Navbar = () => {
   return (
-    <nav className="w-[10%] text-white flex flex-col items-center p-6 pt-[60px]">
+    <nav className="w-full h-full text-white flex flex-col items-center p-6 pt-[60px]">
       <ul className="flex flex-col gap-10 text-lg">
         <li className="flex flex-col items-center font-bold mb-20 hover:text-blue-400 transition">
           <PR className="w-8 h-8 mb-1" />

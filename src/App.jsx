@@ -4,10 +4,12 @@ import RegisterPage from "./pages/AuthRegister";
 import LoginPage from "./pages/AuthLogin";
 import HomePage from "./pages/homePage";
 import Subscription from "./pages/subscription";
+import CreatePoem from "./pages/createPoem";
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
+      <Route path="/CreatePoem" element={<CreatePoem />} />
       <Route path="/Subscription" element={<Subscription />} />
         <Route path="/Register" element={<RegisterPage />} />
         <Route path="/Login" element={<LoginPage />} />

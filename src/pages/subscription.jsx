@@ -2,7 +2,7 @@ import React from "react";
 
 const Subscription = () => {
   return (
-    <div className="w-full flex flex-col justify-center items-center min-h-screen p-8 ">
+    <div className="w-full flex flex-col justify-center items-center min-h-screen p-8  ">
       <div className="items-center flex flex-col mb-6">
         <p className=" text-4xl font-bold text-[#191919] mb-4 text-center">
           Subscription Plans
@@ -11,8 +11,11 @@ const Subscription = () => {
           Choose the best plan for your business
         </p>
       </div>
-      <div className="w-[30%] justify-center items-center flex flex-col p-3 md:flex-row  ">
-        <div className="rounded-sm px-16 py-2 bg-[#EDFAF2] justify-center items-center flex flex-col ">
+
+
+      <div className="w-full justify-evenly items-center flex  p-3 flex-wrap ">
+        <div className="ring-1">
+           <div className="rounded-sm px-16 py-2 bg-[#EDFAF2] justify-center items-center flex flex-col ">
           <p className="font-semibold font-roboto text-[#257F4B] text-2xl mb-2 items-center flex">
             Freemium
           </p>
@@ -35,9 +38,11 @@ const Subscription = () => {
             Subscribe
           </button>
         </div>
+        </div>
+       
 
         
-        <div className="w-[30%] justify-center items-center flex flex-col p-3 ">
+        <div className="justify-center items-center flex flex-col  ring-1 ">
             <div className="rounded-sm px-16 py-2 bg-[#FFF0E2] justify-center items-center flex flex-col ">
                 <p className="font-semibold font-roboto text-[#DF6C03] text-2xl mb-2 items-center flex">
                   Premium
